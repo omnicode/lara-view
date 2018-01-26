@@ -1,0 +1,31 @@
+{
+	"name": "omnicode/lara-view",
+	"description": "Blade files for CRUD methods",
+	"keywords": ["laravel", "crud", "blade"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Omnicode"
+		}
+	],
+	"require": {
+		"laravel/framework": "5.3.* || 5.4.* || 5.5.*",
+		"omnicode/lara-repo": "~0.0",
+		"omnicode/lara-link": "~0.0",
+		"laracasts/flash": "~2.0"
+	},
+	"require-dev": {
+		"mockery/mockery": "~0.9",
+		"phpunit/phpunit": "~4.0|~5.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"LaraView\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\": "tests/"
+		}
+	}
+}
