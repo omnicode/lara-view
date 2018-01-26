@@ -11,15 +11,18 @@ class LaraViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $configPath = __DIR__ . '/../../config/lara_view.php';
+
+        $configPath = __DIR__ . DIRECTORY_SEPARATOR . '..'. DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR
+            .'config' . DIRECTORY_SEPARATOR . 'view.php';
         $this->mergeConfigFrom($configPath, 'lara_view');
 
+        $path = __DIR__ . DIRECTORY_SEPARATOR . '..'. DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR
+            .'resources' . DIRECTORY_SEPARATOR . 'views.php';
 
-        $path = __DIR__.'/../../resources/views';
         $this->loadViewsFrom($path, 'lara-view');
 
         $this->publishes([
-            $path => resource_path('views/vendor/lara-view'),
+            $path => resource_path('views' . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'lara-view'),
             $configPath => config_path('lara_view.php')
         ]);
 
@@ -33,6 +36,6 @@ class LaraViewServiceProvider extends ServiceProvider
     public function register()
     {
         // TODO check it need
-        require_once(__DIR__ . '/../functions.php');
+        require_once(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'functions.php');
     }
 }
