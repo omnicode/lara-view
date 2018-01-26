@@ -17,7 +17,7 @@ class LaraViewServiceProvider extends ServiceProvider
         $this->mergeConfigFrom($configPath, 'lara_view');
 
         $path = __DIR__ . DIRECTORY_SEPARATOR . '..'. DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR
-            .'resources' . DIRECTORY_SEPARATOR . 'views.php';
+            .'resources' . DIRECTORY_SEPARATOR . 'views';
 
         $this->loadViewsFrom($path, 'lara-view');
 
