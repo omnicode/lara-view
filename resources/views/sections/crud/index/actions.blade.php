@@ -20,7 +20,7 @@
             $options['params'] = $_actions['params'];
             $routePrefix = '';
             if (empty($routePrefix)) {
-                $routePrefix = str_replace(str_replace('_', '-', $item->getTable()) . '.index', '', Route::currentRouteName());
+                $routePrefix = str_replace(str_replace('_', '-', $_item->getTable()) . '.index', '', Route::currentRouteName());
                 if (ends_with($routePrefix, '.')) {
                     $routePrefix = str_replace_last('.', '', $routePrefix);
                 }
