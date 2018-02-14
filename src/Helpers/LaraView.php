@@ -15,7 +15,12 @@ class LaraView
      */
     public static function image($path, array $options = [])
     {
-        return '<img src="' . asset('img/' . trim($path, '/')) . '" />';
+        $attr = '';
+        foreach ($options as $index => $value) {
+            $attr .= ' ' . $index . '="' . $value . '"';
+        }
+
+        return '<img src="' . asset('img/' . trim($path, '/')) . '"' . $attr . ' />';
     }
 
     /**
