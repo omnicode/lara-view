@@ -47,8 +47,5 @@ return [
         ]
     ],
     'sidebars' => [
-        'admin/owner_drawings',
-        'countries',
-        'currencies',
     ]
 ];

@@ -42,7 +42,7 @@ class LaraView
     public static function sortParams()
     {
         $params = app('request')->all();
-        unset($params['page']);
+        unset($params['crud']);
         return $params;
     }
 

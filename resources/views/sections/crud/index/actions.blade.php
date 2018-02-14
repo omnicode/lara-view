@@ -18,14 +18,6 @@
                 $options = ['route' => $options];
             }
             $options['params'] = $_actions['params'];
-            $routePrefix = '';
-            if (empty($routePrefix)) {
-                $routePrefix = str_replace(str_replace('_', '-', $item->getTable()) . '.index', '', Route::currentRouteName());
-                if (ends_with($routePrefix, '.')) {
-                    $routePrefix = str_replace_last('.', '', $routePrefix);
-                }
-            }
-            $options['route_prefix'] = $routePrefix;
         }
     @endphp
     {!! LaraLink::itemActionLink(true, $_item, $action, $options) !!}
